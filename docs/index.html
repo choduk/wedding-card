@@ -29,6 +29,8 @@
     gtag('js', new Date());
     gtag('config', 'UA-98691641-1');
 
+
+
     </script>
 </head>
 
@@ -91,6 +93,8 @@
 						font-family:"LeeHyunJi";
 						src: url("fonts/LeeHyunJi.ttf");
 					}
+
+
 
                 </style>
                 <div class="text text-center" style="font-family:KimNamyun; font-size:1.5em; line-height: 2.4em;">
@@ -244,14 +248,31 @@
                                      src="images/map/google-map.png"/>
                             </a>
                         </div>
+                        <div class="my-3">
+                            <!-- * 카카오맵 - 지도퍼가기 -->
+                            <!-- 1. 지도 노드 -->
+                            <div id="daumRoughmapContainer1664224895216" class="root_daum_roughmap root_daum_roughmap_landing" style="width:100%"></div>
+
+                            <!--
+                                2. 설치 스크립트
+                                * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+                            -->
+                            <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                            <!-- 3. 실행 스크립트 -->
+                            <script charset="UTF-8">
+                                new daum.roughmap.Lander({
+                                    "timestamp" : "1664224895216",
+                                    "key" : "2bu9u",
+                                    "mapWidth" : "640",
+                                    "mapHeight" : "360"
+                                }).render();
+                            </script>
+                        </div>
                         <div class="col text-center">
                             <label style="font-family: 'Noto Serif KR', serif; font-size: 15px;">
                                 셔틀버스 - 서울역 후문 롯데마트 앞에서 5분 간격으로 운행
                             </label>
-                        </div>
-                        <div class="my-3">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.777178176819!2d126.9671097!3d37.560313199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca262f5271e31%3A0xc43cedda65ed2b4d!2z66Oo7J2067mE7Iqk7Juo65Sp!5e0!3m2!1sko!2skr!4v1664203141229!5m2!1sko!2skr"
-                                    width="100%" height="450" style="border:0;" allowfullscreen=""></iframe>
                         </div>
                     </div>
                 </div>
