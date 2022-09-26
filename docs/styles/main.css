@@ -3539,10 +3539,6 @@ tbody.collapse.show {
     white-space: nowrap;
 }
 
-.gift-btn-group {
-    width: 100% !important;
-}
-
 .btn-group,
 .btn-group-vertical {
     position: relative;
@@ -4957,10 +4953,6 @@ tbody.collapse.show {
     margin-bottom: 0.75rem;
 }
 
-.gift-columns .gift {
-    margin-bottom: 0.75rem;
-}
-
 @media (min-width: 576px) {
     .card-columns {
         -webkit-column-count: 3;
@@ -4973,41 +4965,6 @@ tbody.collapse.show {
         display: inline-block;
         width: 100%;
     }
-}
-
-@media (min-width: 576px) {
-    .gift-columns {
-        -webkit-column-count: 6;
-        column-count: 6;
-        -webkit-column-gap: 1.25rem;
-        column-gap: 1.25rem;
-    }
-
-    .gift-columns .gift {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-.gift-img {
-    border: 1px lightgrey;
-}
-
-.gift-btn {
-    margin: auto;
-    width: 100%;
-    border-color: lightgrey;
-    background: white;
-    font-family: 'Noto Serif KR', serif;
-}
-
-.gift-selected {
-    filter: brightness(50%);
-}
-
-.gift-message {
-    width: 100%;
-    border-color: lightgrey;
 }
 
 .breadcrumb {
@@ -6462,12 +6419,6 @@ a.bg-danger:hover, a.bg-danger:focus,
 button.bg-danger:hover,
 button.bg-danger:focus {
     background-color: #bd2130 !important;
-}
-
-.bg-gift {
-    background: url("../images/gift/gift-background.png") no-repeat;
-    width: 100%;
-    background-size: cover;
 }
 
 .bg-light {
@@ -9897,17 +9848,8 @@ body {
     min-height: 500px;
 }
 
-.ww-gift-section .ww-gift {
-    min-height: 100px;
-}
 
 .ww-photo-gallery .card-columns .card {
-    border: none;
-    margin-bottom: 15px;
-    border-radius: none;
-}
-
-.ww-gift-section .gift-columns .gift {
     border: none;
     margin-bottom: 15px;
     border-radius: none;
@@ -9920,24 +9862,10 @@ body {
     }
 }
 
-@media (max-width: 992px) {
-    .ww-gift-section .gift-columns {
-        -webkit-column-count: 3;
-        column-count: 3;
-    }
-}
-
 @media (max-width: 576px) {
     .ww-photo-gallery .card-columns {
         -webkit-column-count: 1;
         column-count: 1;
-    }
-}
-
-@media (max-width: 576px) {
-    .ww-gift-section .gift-columns {
-        -webkit-column-count: 3;
-        column-count: 3;
     }
 }
 
