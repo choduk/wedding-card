@@ -9743,16 +9743,6 @@ body {
     }
 }
 
-.ww-home-page .ww-wedding-announcement .ww-couple-name {
-    font-size: 70px;
-}
-
-@media (max-width: 576px) {
-    .ww-home-page .ww-wedding-announcement .ww-couple-name {
-        font-size: 50px;
-    }
-}
-
 .ww-home-page:before {
     content: "";
     background-color: rgba(245, 138, 119, 0.2);
@@ -9954,9 +9944,6 @@ body {
 }
 
 /* Common Style */
-.ww-title {
-    font-family: "Great Vibes", cursive;
-}
 
 .ww-section {
     padding: 100px 0;
