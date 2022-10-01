@@ -46,8 +46,13 @@ function addBrideAccounts(accounts) {
 }
 
 function createAccountItemElement(accountInfo) {
+    var plainText = {
+        bankName: accountInfo["bank_name"],
+        bankAccountNumber: decodeAES256(accountInfo["bank_account_number"]),
+        holderName: accountInfo["holder_name"]
+    }
     return `<div class="dropdown-content-container">
-               <div class="bank-account-item"><span onclick="copyToClipboard(this)">카카오뱅크 1234-56-78910</span><br>김카뱅</div>
+               <div class="bank-account-item"><span onclick="copyToClipboard(this)">${plainText.bankName} ${plainText.bankAccountNumber}</span><br>${plainText.holderName}</div>
                <div class="quick-link-item">
                    <a href="http://kko.to/cqsSb1RLo" target="_blank"><img class="map-icon" src="images/icon/pay-qr.png" style="width: 30px"/></a>
                    <a href="http://kko.to/cqsSb1RLo" target="_blank"><img class="map-icon" src="images/icon/pay-logo.png" style="width: 30px"/></a>
@@ -56,8 +61,8 @@ function createAccountItemElement(accountInfo) {
 }
 
 function getContact(coupleType, prefix) {
-    console.log(prefix + ":" + couple[coupleType]["phone_number"])
-    document.location.href = prefix + ":" + couple[coupleType]["phone_number"]
+    console.log(prefix + ":" + decodeAES256(couple[coupleType]["phone_number"]))
+    document.location.href = prefix + ":" + decodeAES256(couple[coupleType]["phone_number"])
 }
 
 function copyToClipboard(e) {
