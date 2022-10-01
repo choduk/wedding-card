@@ -47,7 +47,7 @@ function addBrideAccounts(accounts) {
 
 function createAccountItemElement(accountInfo) {
     return `<div class="dropdown-content-container">
-               <div class="bank-account-item">카카오뱅크 1234-56-78910<br>김카뱅</div>
+               <div class="bank-account-item"><span onclick="copyToClipboard(this)">카카오뱅크 1234-56-78910</span><br>김카뱅</div>
                <div class="quick-link-item">
                    <a href="http://kko.to/cqsSb1RLo" target="_blank"><img class="map-icon" src="images/icon/pay-qr.png" style="width: 30px"/></a>
                    <a href="http://kko.to/cqsSb1RLo" target="_blank"><img class="map-icon" src="images/icon/pay-logo.png" style="width: 30px"/></a>
@@ -58,6 +58,17 @@ function createAccountItemElement(accountInfo) {
 function getContact(coupleType, prefix) {
     console.log(prefix + ":" + couple[coupleType]["phone_number"])
     document.location.href = prefix + ":" + couple[coupleType]["phone_number"]
+}
+
+function copyToClipboard(e) {
+    var content = e.textContent
+    navigator.clipboard.writeText(content)
+            .then(() => {
+                alert('클립보드에 복사하였습니다.')
+            })
+            .catch(err => {
+                console.log('Something went wrong', err);
+            })
 }
 
 // Smooth scroll for links with hashes
