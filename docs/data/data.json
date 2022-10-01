@@ -13,7 +13,11 @@ couple=
   "bride": {
     "phone_number": "+PnFmmVO0kPhd6QG69Kaig==",
     "accounts": [
-
+      {
+        "holder_name": "차형미",
+        "bank_name": "카카오뱅크",
+        "bank_account_number": "fl4vMLzpWG8g+CfyZlK4kA=="
+      }
     ]
   }
 }
