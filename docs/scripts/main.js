@@ -49,8 +49,8 @@ function createAccountItemElement(accountInfo) {
     return `<div class="dropdown-content-container">
                <div class="bank-account-item">카카오뱅크 1234-56-78910<br>김카뱅</div>
                <div class="quick-link-item">
-                   <a href="http://kko.to/cqsSb1RLo"><img class="map-icon" src="images/icon/pay-qr.png" style="width: 30px"/></a>
-                   <a href="http://kko.to/cqsSb1RLo"><img class="map-icon" src="images/icon/pay-logo.png" style="width: 30px"/></a>
+                   <a href="http://kko.to/cqsSb1RLo" target="_blank"><img class="map-icon" src="images/icon/pay-qr.png" style="width: 30px"/></a>
+                   <a href="http://kko.to/cqsSb1RLo" target="_blank"><img class="map-icon" src="images/icon/pay-logo.png" style="width: 30px"/></a>
                </div>
            </div>`
 }
