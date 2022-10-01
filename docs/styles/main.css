@@ -10001,7 +10001,8 @@ body {
   left: 0;
   background: white;
   box-shadow: 0 4px 5px 0 #00000026;
-  margin-top: -9px
+  margin-top: -9px;
+  font-size: 0.9em
 }
 
 .dropdown-input:checked + label + div.dropdown-content {
@@ -10023,15 +10024,10 @@ body {
   margin: 0;
 }
 
-.dropdown-content ul li {
-  margin: 0.8rem 0;
-}
-
-
 .dropdown-content-container {
   display: flex;
   align-items: center;
-  padding-left: 8px;
+  margin: 10px
 }
 
 .bank-account-item {
