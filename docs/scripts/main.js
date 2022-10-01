@@ -71,6 +71,25 @@ function copyToClipboard(e) {
             })
 }
 
+
+function decodeAES256(data) {
+    var cipher = CryptoJS.AES.decrypt(data, CryptoJS.enc.Utf8.parse(AES256_KEY), {
+        iv: CryptoJS.enc.Utf8.parse(""),
+        padding: CryptoJS.pad.Pkcs7,
+        mode: CryptoJS.mode.CBC
+    });
+    return cipher.toString(CryptoJS.enc.Utf8);
+};
+
+function encodeAES56(data) {
+    var cipher = CryptoJS.AES.encrypt(data, CryptoJS.enc.Utf8.parse(AES256_KEY), {
+        iv: CryptoJS.enc.Utf8.parse(""),
+        padding: CryptoJS.pad.Pkcs7,
+        mode: CryptoJS.mode.CBC
+    });
+    return cipher.toString();
+}
+
 // Smooth scroll for links with hashes
 $("a.smooth-scroll").click(function (event) {
     // On-page links
