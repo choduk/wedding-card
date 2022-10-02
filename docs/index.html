@@ -257,10 +257,7 @@
                     </div>
                 </div>
             </div>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
-            <script>
-                baguetteBox.run('.grid-gallery', { animation: 'slideIn'});
-            </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
         </div>
         <div class="ww-section bg-light ww-rsvp-detail" id="map">
             <div class="container">
@@ -377,4 +374,13 @@
 </div>
 
 </body>
+
+<script>
+    baguetteBox.run('.grid-gallery', {
+        animation: 'slideIn',
+        buttons: true,
+        noScrollbars: true,
+        preload: 4,
+    });
+</script>
 </html>
