@@ -52,10 +52,12 @@ function createAccountItemElement(accountInfo) {
         holderName: accountInfo["holder_name"]
     }
     return `<div class="dropdown-content-container">
-               <div class="bank-account-item"><span onclick="copyToClipboard(this)">${plainText.bankName} ${plainText.bankAccountNumber}</span><br>${plainText.holderName}</div>
+               <div class="bank-account-item" onclick="copyToClipboard(${plainText.bankAccountNumber})">
+                   <span>${plainText.bankName} ${plainText.bankAccountNumber}</span> &nbsp;&nbsp;<i class="fa fa-files-o" aria-hidden="true"></i>
+                   <br>${plainText.holderName}
+               </div>
                <div class="quick-link-item">
-                   <a href="http://kko.to/cqsSb1RLo" target="_blank"><img class="map-icon" src="images/icon/pay-qr.png" style="width: 30px"/></a>
-                   <a href="http://kko.to/k1b0X14sl" target="_blank"><img class="map-icon" src="images/icon/pay-logo.png" style="width: 30px"/></a>
+                   <a href="https://qr.kakaopay.com/Ej9MGBZhw" target="_blank"><img class="map-icon" src="images/icon/pay-logo.png" style="width: 30px"/></a>
                </div>
            </div>`
 }
@@ -65,8 +67,7 @@ function getContact(coupleType, prefix) {
     document.location.href = prefix + ":" + decodeAES256(couple[coupleType]["phone_number"])
 }
 
-function copyToClipboard(e) {
-    var content = e.textContent
+function copyToClipboard(content) {
     navigator.clipboard.writeText(content)
             .then(() => {
                 alert('클립보드에 복사하였습니다.')
