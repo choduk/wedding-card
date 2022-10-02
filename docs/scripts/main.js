@@ -55,7 +55,7 @@ function createAccountItemElement(accountInfo) {
                <div class="bank-account-item"><span onclick="copyToClipboard(this)">${plainText.bankName} ${plainText.bankAccountNumber}</span><br>${plainText.holderName}</div>
                <div class="quick-link-item">
                    <a href="http://kko.to/cqsSb1RLo" target="_blank"><img class="map-icon" src="images/icon/pay-qr.png" style="width: 30px"/></a>
-                   <a href="http://kko.to/cqsSb1RLo" target="_blank"><img class="map-icon" src="images/icon/pay-logo.png" style="width: 30px"/></a>
+                   <a href="http://kko.to/k1b0X14sl" target="_blank"><img class="map-icon" src="images/icon/pay-logo.png" style="width: 30px"/></a>
                </div>
            </div>`
 }
