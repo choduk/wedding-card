@@ -49,7 +49,8 @@ function createAccountItemElement(accountInfo) {
     var plainText = {
         bankName: accountInfo["bank_name"],
         bankAccountNumber: decodeAES256(accountInfo["bank_account_number"]),
-        holderName: accountInfo["holder_name"]
+        holderName: accountInfo["holder_name"],
+        qrLink: accountInfo["qr_link"]
     }
     return `<div class="dropdown-content-container">
                <div class="bank-account-item" onclick="copyToClipboard(${plainText.bankAccountNumber})">
@@ -57,7 +58,7 @@ function createAccountItemElement(accountInfo) {
                    <br>${plainText.holderName}
                </div>
                <div class="quick-link-item">
-                   <a href="https://qr.kakaopay.com/Ej9MGBZhw" target="_blank"><img class="map-icon" src="images/icon/pay-logo.png" style="width: 30px"/></a>
+                   <a href="${plainText.qrLink}" target="_blank"><img class="map-icon" src="images/icon/pay-logo.png" style="width: 30px"/></a>
                </div>
            </div>`
 }

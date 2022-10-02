@@ -6,7 +6,8 @@ couple=
       {
         "holder_name": "조덕",
         "bank_name": "카카오뱅크",
-        "bank_account_number": "64eJf10ycgQuWopGqMI0TA=="
+        "bank_account_number": "64eJf10ycgQuWopGqMI0TA==",
+        "qr_link" : "https://qr.kakaopay.com/Ej9MGBZhw"
       }
     ]
   },
@@ -16,7 +17,8 @@ couple=
       {
         "holder_name": "차형미",
         "bank_name": "카카오뱅크",
-        "bank_account_number": "o0ayJXiPovVPo5LYvMeaoA=="
+        "bank_account_number": "o0ayJXiPovVPo5LYvMeaoA==",
+        "qr_link" : "https://qr.kakaopay.com/Ej8oQSGAQ"
       }
     ]
   }
