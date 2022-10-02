@@ -11,8 +11,8 @@ $(document).ready(function () {
         return false;
     });
     // 갤러리가 몇개 없으니 대충 복붙
-    var portraitImageNames = ["portrait1.jpeg", "portrait2.jpeg", "portrait3.jpeg", "portrait4.jpeg", "portrait5.jpeg"]
-    var landscapeImageNames = ["landscape1.jpeg", "landscape2.jpeg", "landscape3.jpeg", "landscape4.jpeg"]
+    var portraitImageNames = ["portrait1.jpeg", "portrait2.jpeg", "portrait3.jpeg", "portrait4.jpeg", "portrait5.jpeg", "portrait6.jpeg", "portrait7.jpeg", "portrait8.jpeg"]
+    var landscapeImageNames = ["landscape1.jpeg", "landscape2.jpeg", "landscape3.jpeg", "landscape4.jpeg", "landscape5.jpeg"]
 
     $(".card a img")[0].src = "images/" + portraitImageNames.splice(rand(0, portraitImageNames.length), 1)
     $(".card a img")[1].src = "images/" + landscapeImageNames.splice(rand(0, landscapeImageNames.length), 1)
