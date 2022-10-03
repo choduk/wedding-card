@@ -12,6 +12,8 @@ $(document).ready(function () {
     });
 
     setCoupleAccounts()
+
+    var clipboard = new ClipboardJS('.btn')
 })
 
 function rand(min, max) {
@@ -45,8 +47,8 @@ function createAccountItemElement(accountInfo) {
 
     if (plainText.qrLink)
         return `<div class="dropdown-content-container">
-                   <div class="bank-account-item" onclick="copyToClipboard(${plainText.bankAccountNumber})">
-                       <span>${plainText.bankName} ${plainText.bankAccountNumber}</span> &nbsp;&nbsp;<i class="fa fa-files-o" aria-hidden="true"></i>
+                   <div class="bank-account-item" onclick="copyToClipboard(this)">
+                       <span class="clipboard-target">${plainText.bankName} ${plainText.bankAccountNumber}</span> &nbsp;&nbsp;<i class="fa fa-files-o" aria-hidden="true"></i>
                        <br>${plainText.holderName}
                    </div>
                    <div class="quick-link-item">
@@ -55,8 +57,8 @@ function createAccountItemElement(accountInfo) {
                </div>`
     else
         return `<div class="dropdown-content-container">
-                    <div class="bank-account-item" onclick="copyToClipboard(${plainText.bankAccountNumber})">
-                        <span>${plainText.bankName} ${plainText.bankAccountNumber}</span> &nbsp;&nbsp;<i class="fa fa-files-o" aria-hidden="true"></i>
+                    <div class="bank-account-item" onclick="copyToClipboard(this)">
+                        <span class="clipboard-target">${plainText.bankName} ${plainText.bankAccountNumber}</span> &nbsp;&nbsp;<i class="fa fa-files-o" aria-hidden="true"></i>
                         <br>${plainText.holderName}
                    </div>
                </div>`
@@ -67,14 +69,15 @@ function getContact(coupleType, prefix) {
     document.location.href = prefix + ":" + decodeAES256(couple[coupleType]["phone_number"])
 }
 
-function copyToClipboard(content) {
-    navigator.clipboard.writeText(content)
-            .then(() => {
-                alert('클립보드에 복사하였습니다.')
-            })
-            .catch(err => {
-                console.log('Something went wrong', err);
-            })
+// 레거시 브라우저 문제로 아래 방법으로 바꿈
+function copyToClipboard(e) {
+    var element = document.createElement("textarea");
+    element.value = $(e).children('.clipboard-target').text();
+    document.body.appendChild(element)
+    element.select();
+    document.execCommand("copy");
+    document.body.removeChild(element);
+    alert('클립보드에 복사하였습니다.')
 }
 
 
