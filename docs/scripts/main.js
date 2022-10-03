@@ -117,6 +117,7 @@ $("a.smooth-scroll").click(function (event) {
                 },
                 1000,
                 function () {
+                    $('.navbar-collapse').collapse('hide');
                     // Callback after animation
                     // Must change focus!
                     var $target = $(target);
