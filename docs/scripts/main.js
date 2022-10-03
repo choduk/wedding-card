@@ -42,15 +42,24 @@ function createAccountItemElement(accountInfo) {
         holderName: accountInfo["holder_name"],
         qrLink: accountInfo["qr_link"]
     }
-    return `<div class="dropdown-content-container">
-               <div class="bank-account-item" onclick="copyToClipboard(${plainText.bankAccountNumber})">
-                   <span>${plainText.bankName} ${plainText.bankAccountNumber}</span> &nbsp;&nbsp;<i class="fa fa-files-o" aria-hidden="true"></i>
-                   <br>${plainText.holderName}
-               </div>
-               <div class="quick-link-item">
-                   <a href="${plainText.qrLink}" target="_blank"><img class="map-icon" src="images/icon/pay-logo.png" style="width: 30px"/></a>
-               </div>
-           </div>`
+
+    if (plainText.qrLink)
+        return `<div class="dropdown-content-container">
+                   <div class="bank-account-item" onclick="copyToClipboard(${plainText.bankAccountNumber})">
+                       <span>${plainText.bankName} ${plainText.bankAccountNumber}</span> &nbsp;&nbsp;<i class="fa fa-files-o" aria-hidden="true"></i>
+                       <br>${plainText.holderName}
+                   </div>
+                   <div class="quick-link-item">
+                       <a href="${plainText.qrLink}" target="_blank"><img class="map-icon" src="images/icon/pay-logo.png" style="width: 30px"/></a>
+                   </div>
+               </div>`
+    else
+        return `<div class="dropdown-content-container">
+                    <div class="bank-account-item" onclick="copyToClipboard(${plainText.bankAccountNumber})">
+                        <span>${plainText.bankName} ${plainText.bankAccountNumber}</span> &nbsp;&nbsp;<i class="fa fa-files-o" aria-hidden="true"></i>
+                        <br>${plainText.holderName}
+                   </div>
+               </div>`
 }
 
 function getContact(coupleType, prefix) {
