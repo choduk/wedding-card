@@ -12,8 +12,6 @@ $(document).ready(function () {
     });
 
     setCoupleAccounts()
-
-    var clipboard = new ClipboardJS('.btn')
 })
 
 function rand(min, max) {
