@@ -8,6 +8,16 @@ couple=
         "bank_name": "카카오뱅크",
         "bank_account_number": "64eJf10ycgQuWopGqMI0TA==",
         "qr_link" : "https://qr.kakaopay.com/Ej9MGBZhw"
+      },
+      {
+        "holder_name": "조수형",
+        "bank_name": "우리은행",
+        "bank_account_number": "0xw2Zv61GwGv4kaoNd3WaQ=="
+      },
+      {
+        "holder_name": "김영신",
+        "bank_name": "국민은행",
+        "bank_account_number": "MbKVuz0rgYOWlyGJ2WCBgQ=="
       }
     ]
   },
